@@ -188,10 +188,48 @@ const updateQRCode = async (req, res) => {
     }
 };
 
+// ฟังก์ชันสำหรับลบ QR Code
+const deleteQRCode = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        // ค้นหาและลบ QR Code
+        const qrcode = await QRCode.findByIdAndDelete(id);
+
+        if (!qrcode) {
+            return res.status(404).json({
+                success: false,
+                message: 'QR Code not found',
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'QR Code deleted successfully',
+        });
+    } catch (error) {
+        console.error('Error deleting QR Code:', error); // เพิ่มการ log ข้อผิดพลาด
+
+        if (error.kind === 'ObjectId') {
+            return res.status(404).json({
+                success: false,
+                message: 'QR Code not found',
+            });
+        }
+
+        res.status(500).json({
+            success: false,
+            message: 'Server Error',
+        });
+    }
+};
+
+
 module.exports = {
     createQRCode,
     getAllQRCodes,
     getQRCodeById,
     downloadQRCode,
-    updateQRCode
+    updateQRCode,
+    deleteQRCode
 };
