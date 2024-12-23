@@ -15,6 +15,10 @@ app.use(express.json());
 // เชื่อมต่อกับ MongoDB
 connectDB();
 
+const helmet = require('helmet');
+
+app.use(helmet());
+
 // นำเข้า Route สำหรับ QR Code
 const qrCodeRoutes = require('./routes/qrCodeRoutes');
 
