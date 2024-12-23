@@ -15,6 +15,12 @@ app.use(express.json());
 // เชื่อมต่อกับ MongoDB
 connectDB();
 
+// นำเข้า Route สำหรับ QR Code
+const qrCodeRoutes = require('./routes/qrCodeRoutes');
+
+// ใช้ Route สำหรับ QR Code
+app.use('/api/qrcodes', qrCodeRoutes);
+
 // กำหนดเส้นทางเบื้องต้น
 app.get('/', (req, res) => {
     res.send('QR Code Generator Backend');
