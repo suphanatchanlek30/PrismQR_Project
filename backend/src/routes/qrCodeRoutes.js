@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const { createQRCode, getAllQRCodes, getQRCodeById, downloadQRCode } = require('../controllers/qrCodeController');
+const { createQRCode, getAllQRCodes, getQRCodeById, downloadQRCode, updateQRCode } = require('../controllers/qrCodeController');
 
 // Route สำหรับสร้าง QR Code ใหม่
 router.post('/', createQRCode);
@@ -15,5 +15,8 @@ router.get('/:id', getQRCodeById);
 
 // Route สำหรับดาวน์โหลด QR Code
 router.get('/:id/download', downloadQRCode);
+
+// Route สำหรับอัปเดต QR Code
+router.put('/:id', updateQRCode);
 
 module.exports = router;

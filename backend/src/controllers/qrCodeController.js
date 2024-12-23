@@ -138,9 +138,60 @@ const downloadQRCode = async (req, res) => {
     }
 };
 
+// ฟังก์ชันสำหรับอัปเดต QR Code
+const updateQRCode = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { url, format } = req.body;
+
+        // ค้นหาและอัปเดต QR Code
+        const qrcode = await QRCode.findById(id);
+        if (!qrcode) {
+            return res.status(404).json({
+                success: false,
+                message: 'QR Code not found',
+            });
+        }
+
+        // อัปเดตข้อมูล
+        if (url) qrcode.url = url;
+        if (format) {
+            const lowerFormat = format.toLowerCase();
+            if (!['png', 'jpg'].includes(lowerFormat)) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Invalid format. Only png and jpg are supported.',
+                });
+            }
+            qrcode.format = lowerFormat;
+        }
+
+        await qrcode.save();
+
+        res.status(200).json({
+            success: true,
+            data: qrcode,
+        });
+    } catch (error) {
+        // ตรวจสอบว่ามีความผิดพลาดเกี่ยวกับ ObjectId หรือไม่
+        if (error.kind === 'ObjectId') {
+            return res.status(404).json({
+                success: false,
+                message: 'QR Code not found',
+            });
+        }
+
+        res.status(500).json({
+            success: false,
+            message: 'Server Error',
+        });
+    }
+};
+
 module.exports = {
     createQRCode,
     getAllQRCodes,
     getQRCodeById,
-    downloadQRCode
+    downloadQRCode,
+    updateQRCode
 };
