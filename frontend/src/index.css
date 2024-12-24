@@ -9,3 +9,27 @@
     100% { transform: translateX(-100%); }
 }
 
+@layer base {
+    .green-glow::before {
+      content: "";
+      position: absolute;
+      top: -300px; left: 50%;
+      width: 500px; height: 500px;
+      background: rgba(0, 255, 0, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(150px);
+      pointer-events: none;
+    }
+}
+
+/* Form */
+
+.url input[type="url"]::placeholder {
+    color: #535353;
+}
+
+.url select:focus {
+    border-color: #a0a5ae;
+    outline: none;
+}
