@@ -9,9 +9,8 @@ const Navbar = () => {
                 behavior="scroll" 
                 direction="left" 
                 scrollamount="10" 
-                class="whitespace-nowrap" 
-                className="pt-2 text-[#161616] text-[14px] font-body2 font-medium"> 
-                <div class="animate-marquee whitespace-nowrap tracking-widest">
+                className="whitespace-nowrap pt-2 text-[#161616] text-[14px] font-body2 font-medium"> 
+                <div className="animate-marquee whitespace-nowrap tracking-widest">
                     GENERATE UNLIMITED QR CODES +++ START FOR FREE +++ GENERATE UNLIMITED QR CODES +++ START FOR FREE GENERATE UNLIMITED QR CODES +++ START FOR FREE +++ GENERATE UNLIMITED QR CODES +++ START FOR FREE GENERATE UNLIMITED QR CODES +++ START FOR FREE +++ GENERATE UNLIMITED QR CODES +++ START FOR FREE
                 </div>
             </marquee>
