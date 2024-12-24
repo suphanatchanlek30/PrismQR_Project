@@ -32,7 +32,7 @@ const Navbar = () => {
 
                 {/* Button */}
                 <button className="bg-[#01CC03] px-[16px] py-[12px] text-[14px] font-semibold rounded-[4px] hover:bg-[#01cc04ea] focus:outline-none tracking-[0.5px] duration-100">
-                    CONTACT
+                    <a href="https://www.facebook.com/suphanat.chanlek" target='_blank'>CONTACT</a>
                 </button>
             </div>
         </nav>
