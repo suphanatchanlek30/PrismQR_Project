@@ -52,7 +52,7 @@ const Home = () => {
         <section className="relative flex font-body2 items-center justify-center bg-black text-white py-20 px-4">
             <div className='absolute green-glow'></div>
 
-            <div className="max-w-4xl h-[1080px] text-center mt-10">
+            <div className="max-w-4xl h-[740px] text-center mt-10">
                 {/* ข้อความบรรทัดแรก */}
                 <h1 className="relative text-3xl sm:text-4xl md:text-6xl font-bold uppercase leading-tight tracking-wide mb-4 z-50">
                     The fastest and the most powerful <span className='text-[#01CC03]'>QR code</span> generator
@@ -110,13 +110,13 @@ const Home = () => {
                 {/* แสดงลิงก์ดาวน์โหลด QR Code หากมี */}
                 {downloadLink && (
                     <div className="mt-6">
-                        <h3 className="text-lg font-semibold mb-6">ดาวน์โหลด QR Code ของคุณ</h3>
+                        <h3 className="text-lg font-semibold mb-6">Download your QR Code</h3>
                         <a
                             href={downloadLink}
                             download
                             className="px-6 py-3 bg-[#01CC03] text-black font-semibold rounded-md hover:bg-[#01cc04ea] transition"
                         >
-                            ดาวน์โหลด QR Code
+                            Download QR Code
                         </a>
                     </div>
                 )}
