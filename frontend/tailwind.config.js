@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      body: ['Athiti', 'sans-serif'],
+      body2: ['Geist', 'sans-serif'],
+    },
   },
   plugins: [],
 }
