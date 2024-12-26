@@ -1,6 +1,6 @@
 # PrismQR
 
-**PrismQR** is a full-stack QR code generation application. It allows users to create QR codes from any link or text, download them as `.png` or `.jpg`, and optionally store their generated QR codes in a MongoDB database for future reference. This project is built using **React.js**, **Tailwind CSS**, **Node.js**, **Express.js**, and **MongoDB**.
+**PrismQR** is a full-stack QR code generation web application. It allows users to create QR codes from any link or text, download them as `.png` or `.jpg`, and optionally store their generated QR codes in a MongoDB database for future reference. This project is built using **React.js**, **Tailwind CSS**, **Node.js**, **Express.js**, and **MongoDB**.
 
 ---
 
@@ -58,3 +58,6 @@
 6. **cd backend** the repository:
    ```bash
    npm run dev
+
+Author: Suphanat Chanlek
+Contact: suphanatchanlek@gmail.com
