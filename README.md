@@ -36,26 +36,26 @@
    git clone https://github.com/suphanatchanlek30/PrismQR_Project.git
    cd PrismQR
 
-2. **cd backend** the repository:
+2. **cd backend** the folder:
    ```bash
    cd backend
    npm install
    
-3. **cd frontend** the repository:
+3. **cd frontend** the folder:
    ```bash
    cd frontend
    npm install
 
-4. **cd backend and  create a .env file inside the backend folder ** the repository:
+4. **cd backend and  create a .env file inside the backend folder** the folder:
    ```bash
    MONGODB_URI=create mongodb
    PORT=5000
 
-5. **cd frontend** the repository:
+5. **cd frontend** the folder:
    ```bash
    npm run dev
 
-6. **cd backend** the repository:
+6. **cd backend** the folder:
    ```bash
    npm run dev
 
