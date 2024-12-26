@@ -59,5 +59,5 @@
    ```bash
    npm run dev
 
-Author: Suphanat Chanlek
+Author: Suphanat Chanlek <br/>
 Contact: suphanatchanlek@gmail.com
