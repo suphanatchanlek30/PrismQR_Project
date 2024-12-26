@@ -33,5 +33,28 @@
 
 1. **Clone** the repository:
    ```bash
-   git clone https://github.com/YourUsername/PrismQR.git
+   git clone https://github.com/suphanatchanlek30/PrismQR_Project.git
    cd PrismQR
+
+2. **cd backend** the repository:
+   ```bash
+   cd backend
+   npm install
+   
+3. **cd frontend** the repository:
+   ```bash
+   cd frontend
+   npm install
+
+4. **cd backend and  create a .env file inside the backend folder ** the repository:
+   ```bash
+   MONGODB_URI=create mongodb
+   PORT=5000
+
+5. **cd frontend** the repository:
+   ```bash
+   npm run dev
+
+6. **cd backend** the repository:
+   ```bash
+   npm run dev
